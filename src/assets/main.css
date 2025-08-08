@@ -36,20 +36,56 @@
   @apply bg-red-400;
 }
 
+/* Destaque para células recém-adicionadas */
+.cell-new {
+  @apply bg-emerald-600 hover:bg-emerald-500;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #10b981;
+  }
+  to {
+    box-shadow: 0 0 15px #10b981, 0 0 20px #10b981;
+  }
+}
+
 /* Cores específicas para números */
-.cell-number-1 { color: #1e40af; } /* blue-800 */
-.cell-number-2 { color: #15803d; } /* green-700 */
-.cell-number-3 { color: #dc2626; } /* red-600 */
-.cell-number-4 { color: #7c2d12; } /* amber-900 */
-.cell-number-5 { color: #7c2d12; } /* amber-900 */
-.cell-number-6 { color: #be185d; } /* pink-700 */
-.cell-number-7 { color: #000000; } /* black */
-.cell-number-8 { color: #374151; } /* gray-700 */
+.cell-number-1 {
+  color: #1e40af;
+} /* blue-800 */
+.cell-number-2 {
+  color: #15803d;
+} /* green-700 */
+.cell-number-3 {
+  color: #dc2626;
+} /* red-600 */
+.cell-number-4 {
+  color: #7c2d12;
+} /* amber-900 */
+.cell-number-5 {
+  color: #7c2d12;
+} /* amber-900 */
+.cell-number-6 {
+  color: #be185d;
+} /* pink-700 */
+.cell-number-7 {
+  color: #000000;
+} /* black */
+.cell-number-8 {
+  color: #374151;
+} /* gray-700 */
 
 /* Animações */
 @keyframes pulse-win {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 .win-animation {
@@ -57,12 +93,18 @@
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-2px); }
-  75% { transform: translateX(2px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
 }
 
 .game-over-animation {
   animation: shake 0.5s ease-in-out;
 }
-
